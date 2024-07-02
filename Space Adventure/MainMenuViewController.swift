@@ -6,16 +6,45 @@
 //
 
 import UIKit
+import AVFoundation
 
 class MainMenuViewController: UIViewController {
 
+    @IBOutlet weak var muteButton: UIButton!
+    @IBOutlet weak var backgroundImageView: UIImageView!
+    var backgroundNumber = 1
+    var isMute = false
+    
+    // cek music player nya tadi di mana buatnya?
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func changeBackground(_ sender: Any) {
+        if backgroundNumber == 1 {
+            backgroundImageView.image = UIImage(named: "BGmainmenu2")
+            backgroundNumber = 2
+        } else {
+            backgroundImageView.image = UIImage(named: "BGmainmenu1")
+            backgroundNumber = 1
+        }
+    }
+    
+    @IBAction func changeMuteStatus(_ sender: Any) {
+        if !isMute{
+            muteButton.setImage(UIImage(systemName: "speaker.slash.circle.fill"), for: .normal)
+            isMute = true
+            appDelegate.music?.stop()
+        } else { muteButton.setImage(UIImage(systemName: "speaker.circle.fill"), for: .normal)
+            isMute = false
+            appDelegate.music?.play()
+        }
+    }
     /*
     // MARK: - Navigation
 

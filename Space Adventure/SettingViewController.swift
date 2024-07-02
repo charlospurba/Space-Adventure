@@ -6,16 +6,50 @@
 //
 
 import UIKit
+import AVFoundation
 
 class SettingViewController: UIViewController {
+    
+    var playerVideo: AVPlayer?
+    var isPause = false
+    
 
+    @IBOutlet weak var pausePlayButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
+        playVideo()
 
         // Do any additional setup after loading the view.
     }
     
-
+    func playVideo(){
+        guard let videoLocation = Bundle.main.path(forResource: "vid", ofType:"mp4") else {return
+        }
+        
+        playerVideo = AVPlayer(url: URL(filePath: videoLocation))
+        let videoView = AVPlayerLayer(player: playerVideo)
+        videoView.frame = CGRect(x: 130, y: -50, width: 500, height: 500)
+        view.layer.addSublayer(videoView)
+        playerVideo?.play()
+        
+    }
+    
+    @IBAction func playPause(_ sender: Any) {
+        if !isPause {
+            pausePlayButton.setTitle("Play", for: .normal)
+            isPause = true
+            playerVideo?.pause()
+        } else {
+            pausePlayButton.setTitle("Pause", for: .normal)
+            isPause = false
+            playerVideo?.play()
+        }
+    }
+    
+    @IBAction func backHome(_ sender: Any) {
+        dismiss(animated: true)
+    }
+    
     /*
     // MARK: - Navigation
 

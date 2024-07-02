@@ -42,4 +42,7 @@ class GameViewController: UIViewController {
     override var prefersStatusBarHidden: Bool {
         return true
     }
+    @IBAction func goBackHome(_ sender: Any) {
+        dismiss(animated: true)
+    }
 }

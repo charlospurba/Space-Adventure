@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ED131ADE2C328DE4000F183B /* bgmusic.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = ED131ADD2C328DE3000F183B /* bgmusic.mp3 */; };
+		ED131AE02C3294BD000F183B /* vid.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = ED131ADF2C3294BD000F183B /* vid.mp4 */; };
 		EDA302F52C2BF8480067C600 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA302F42C2BF8480067C600 /* AppDelegate.swift */; };
 		EDA302F72C2BF8480067C600 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = EDA302F62C2BF8480067C600 /* GameScene.sks */; };
 		EDA302F92C2BF8480067C600 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = EDA302F82C2BF8480067C600 /* Actions.sks */; };
@@ -15,9 +17,13 @@
 		EDA303002C2BF8480067C600 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = EDA302FF2C2BF8480067C600 /* Base */; };
 		EDA303022C2BF8490067C600 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDA303012C2BF8490067C600 /* Assets.xcassets */; };
 		EDA303052C2BF8490067C600 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = EDA303042C2BF8490067C600 /* Base */; };
+		EDA303102C2C09370067C600 /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA3030F2C2C09370067C600 /* MainMenuViewController.swift */; };
+		EDA303122C2C094C0067C600 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA303112C2C094C0067C600 /* SettingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		ED131ADD2C328DE3000F183B /* bgmusic.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bgmusic.mp3; sourceTree = "<group>"; };
+		ED131ADF2C3294BD000F183B /* vid.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = vid.mp4; sourceTree = "<group>"; };
 		EDA302F12C2BF8480067C600 /* Space Adventure.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Space Adventure.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDA302F42C2BF8480067C600 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EDA302F62C2BF8480067C600 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -27,6 +33,8 @@
 		EDA302FF2C2BF8480067C600 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EDA303012C2BF8490067C600 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EDA303042C2BF8490067C600 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EDA3030F2C2C09370067C600 /* MainMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuViewController.swift; sourceTree = "<group>"; };
+		EDA303112C2C094C0067C600 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +75,10 @@
 				EDA302FE2C2BF8480067C600 /* Main.storyboard */,
 				EDA303012C2BF8490067C600 /* Assets.xcassets */,
 				EDA303032C2BF8490067C600 /* LaunchScreen.storyboard */,
+				EDA3030F2C2C09370067C600 /* MainMenuViewController.swift */,
+				EDA303112C2C094C0067C600 /* SettingViewController.swift */,
+				ED131ADD2C328DE3000F183B /* bgmusic.mp3 */,
+				ED131ADF2C3294BD000F183B /* vid.mp4 */,
 			);
 			path = "Space Adventure";
 			sourceTree = "<group>";
@@ -134,6 +146,8 @@
 				EDA303022C2BF8490067C600 /* Assets.xcassets in Resources */,
 				EDA302F92C2BF8480067C600 /* Actions.sks in Resources */,
 				EDA303052C2BF8490067C600 /* Base in Resources */,
+				ED131AE02C3294BD000F183B /* vid.mp4 in Resources */,
+				ED131ADE2C328DE4000F183B /* bgmusic.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -144,6 +158,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDA303122C2C094C0067C600 /* SettingViewController.swift in Sources */,
+				EDA303102C2C09370067C600 /* MainMenuViewController.swift in Sources */,
 				EDA302FB2C2BF8480067C600 /* GameScene.swift in Sources */,
 				EDA302FD2C2BF8480067C600 /* GameViewController.swift in Sources */,
 				EDA302F52C2BF8480067C600 /* AppDelegate.swift in Sources */,
@@ -303,8 +319,8 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UIStatusBarHidden = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -330,8 +346,8 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UIStatusBarHidden = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
